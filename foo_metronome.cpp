@@ -31,10 +31,10 @@ static const GUID guid_cfg_bpm = { 0xdd0dc9e7, 0xda12, 0x4671, { 0x90, 0x5a, 0xa
 advconfig_string_factory cfg_bpm("bpm ", guid_cfg_bpm, guid_cfg_branch, 0, "60");
 
 VOID CALLBACK MetronomeTimer(
-	HWND hwnd,        // handle to window for timer messages
-	UINT message,     // WM_TIMER message
+	HWND,        // handle to window for timer messages
+	UINT,     // WM_TIMER message
 	UINT idEvent1,     // timer identifier
-	DWORD dwTime)     // current system time
+	DWORD)     // current system time
 {
 	if (menu_metronome_enabled)
 	{
@@ -129,7 +129,7 @@ public:
 	}
 	virtual t_uint32 get_sort_priority()
 	{
-		return sort_priority_dontcare;
+		return 0x80000000;
 	}
 	bool is_checked(t_uint32 p_index)
 	{
