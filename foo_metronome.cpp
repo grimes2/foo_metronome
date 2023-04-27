@@ -83,7 +83,7 @@ public:
 	virtual bool get_description(t_uint32 p_index, pfc::string_base& p_out)
 	{
 		if (p_index == 0)
-			p_out = "Metronome to console";
+			p_out = "Metronome to console.";
 		else
 			return false;
 		return true;
